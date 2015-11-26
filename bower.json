@@ -1,0 +1,9 @@
+{
+  "name": "PetUI",
+  "devDependencies": {
+    "request": "~2.67.1"
+  },
+  "dependencies": {
+    "request": "~2.67.1"
+  }
+}

@@ -1,0 +1,25 @@
+
+	
+function dd(petid){
+
+
+var url = 'http://localhost:8000/pet/'+petid;
+var method = 'DELETE';
+//var postData = "Some data";
+var async = true;
+
+var request = new XMLHttpRequest();
+
+request.onload = function () {  
+   var status = request.status; 
+   var data = request.responseText; 
+}
+
+request.open(method, url, async);
+request.setRequestHeader('Host', 'localhost:8080');
+request.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI3OWZjYTA2OTM4NWY0ZGI3Y2Q2MTM1NjU0MzdjYWJjMSJ9._UgdbhaYLB-V0tvKwdd-34zSSaNGqrZGFX__zAZxSyU');
+request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+request.send("");
+
+}
