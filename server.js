@@ -1,63 +1,23 @@
-var finalhandler = require('finalhandler')
-var http = require('http')
-var serveStatic = require('serve-static')
+/*
+ *
+ *  (C) Copyright 2010-2015 hSenid Mobile Solutions (Pvt) Limited.
+ *   All Rights Reserved.
+ *
+ *   These materials are unpublished, proprietary, confidential source code of
+ *   hSenid Mobile Solutions (Pvt) Limited and constitute a TRADE SECRET
+ *   of hSenid Mobile Solutions (Pvt) Limited.
+ *
+ *   hSenid Mobile Solutions (Pvt) Limited retains all title to and intellectual
+ *   property rights in these materials.
+ *
+ */
 
-// Serve up public/ftp folder
-var serve = serveStatic('petUI', {'index': ['app.html', 'app.htm']})
+var express = require('express');
 
-// Create server
-var server = http.createServer(function(req, res){
-    var done = finalhandler(req, res)
-    serve(req, res, done)
-})
+var server = express();
+server.use(express.static(__dirname + '/public'));
 
-// Listen
-server.listen(3000)
-
-
-/*var serveStatic = require('serve-static')
-
-
-var path    = require("path");
-var express = require("express");
-
-var app     = express();
-
-
-app.use(express.static('petUI'));
-app.get('',function(req,res){
-    res.sendFile(path.join(__dirname+'/app.html'));
+var port = 10001;
+server.listen(port, function () {
+    console.log('server listening on port ' + port);
 });
-//app.use("/bundle.js ", express.static(__dirname + '/bundle.js'));
-//app.use(express.static(__dirname+'bundle.js'));
-
-
-app.listen(3900);
-console.log("Running at Port 3900");
-
-
-
-
-
- /*
-var util = require('util'),
-    connect = require('connect'),
-    port = 1378;
-
-connect.use(connect.static(__dirname)).listen(port);
-console.log('Listening on ' + port + '...');
-console.log('Press Ctrl + C to stop.');
-
-
-
-var http = require('http');
-var connect = require('connect');
-
-// Create a connect dispatcher
-var app = connect()
-    // register a middleware
-    .use(function (req, res, next) { next(); });
-
-// Register with http
-http.createServer(app)
-    .listen(3000);*/
