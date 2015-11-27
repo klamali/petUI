@@ -25,12 +25,12 @@ then the url which u type in browser must change accordingly
 
 
 but before using this u should check weather following works properly
-1. petstore-api
+petstore-api
 --->this is another repository in my github
 --->u can refer readme.md of that to run that project and use "postman chrome plugin to check weather it is working"
 --->"mvn exec:java -Dexec.mainClass="hms.petstore.service.Main""
 
-2. mongoDB connection
+mongoDB connection
 --->type mongod in the terminal on the pc which petstore-api is executing
 
 #Hope this was helpful :) #
