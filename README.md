@@ -36,8 +36,4 @@ but before using this u should check weather following works properly
 #Hope this was helpful :) #
 
 
-things to do
-1. write post,delete,put,get in seperate file and add them using "webpack(instead of browserify)"
-2. check weather using bower and gulp is necessary. some documentation of webpack says bower is not needed anymore
-3. add jwt authentication headers--> only needed to uncomment header data regarding this
-4. add newest version of petstore-api to git (CORS headers added)
+
